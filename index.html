@@ -325,6 +325,326 @@
             background: var(--white);
         }
 
+        /* Calculator Styles */
+        .calculator-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 2rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+
+        .calculator-section {
+            background: var(--gray-100);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .form-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .form-section h3 {
+            color: var(--black);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Radio Buttons */
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .radio-option:hover {
+            border-color: var(--yellow);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .radio-option input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: var(--yellow-dark);
+            flex-shrink: 0;
+        }
+
+        .radio-option input[type="radio"]:checked + .radio-label {
+            color: var(--black);
+        }
+
+        .radio-label {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            cursor: pointer;
+            color: var(--gray-700);
+        }
+
+        .radio-label strong {
+            color: var(--black);
+            font-size: 1.05rem;
+        }
+
+        .radio-description {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+
+        /* Input Groups */
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-group input[type="number"] {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            padding-right: 7rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            background: var(--white);
+        }
+
+        .input-group input[type="number"]:focus {
+            outline: none;
+            border-color: var(--yellow);
+        }
+
+        .input-suffix {
+            position: absolute;
+            right: 1rem;
+            color: var(--gray-600);
+            font-weight: 500;
+            font-size: 0.9rem;
+            pointer-events: none;
+        }
+
+        .input-note {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Checkbox */
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .checkbox-group:hover {
+            border-color: var(--yellow);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: var(--yellow-dark);
+            flex-shrink: 0;
+        }
+
+        .checkbox-label {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .checkbox-label strong {
+            color: var(--black);
+            font-size: 1.05rem;
+        }
+
+        .checkbox-description {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+
+        /* Price Display */
+        .price-display {
+            position: sticky;
+            top: 2rem;
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+            padding: 2.5rem;
+            border-radius: 12px;
+            color: var(--white);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray-400);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-amount {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 3.5rem;
+            color: var(--yellow);
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .price-range {
+            font-size: 1.1rem;
+            color: var(--gray-200);
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--gray-700);
+        }
+
+        .price-breakdown {
+            margin-bottom: 2rem;
+        }
+
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            color: var(--gray-200);
+            border-bottom: 1px solid var(--gray-700);
+        }
+
+        .breakdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .breakdown-label {
+            font-size: 0.95rem;
+        }
+
+        .breakdown-value {
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 1.25rem;
+            background: var(--yellow);
+            color: var(--black);
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button:hover {
+            background: var(--yellow-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 214, 0, 0.4);
+        }
+
+        .cta-secondary {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gray-600);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-secondary:hover {
+            border-color: var(--yellow);
+            color: var(--yellow);
+        }
+
+        .disclaimer {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            border: 2px solid var(--gray-200);
+        }
+
+        .disclaimer h3 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--gray-900);
+        }
+
+        .disclaimer p {
+            font-size: 0.9rem;
+            color: var(--gray-700);
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .disclaimer p:last-child {
+            margin-bottom: 0;
+        }
+
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -702,6 +1022,16 @@
             .mobile-menu-btn {
                 display: block;
             }
+
+            .calculator-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .price-display {
+                position: relative;
+                top: 0;
+                order: -1;
+            }
         }
 
         @media (max-width: 768px) {
@@ -732,6 +1062,28 @@
             }
             .area-list {
                 grid-template-columns: 1fr;
+            }
+
+            .calculator-section {
+                padding: 1.5rem;
+            }
+
+            .price-display {
+                padding: 2rem;
+            }
+
+            .price-amount {
+                font-size: 3rem;
+            }
+
+            .radio-group, .calculator-wrapper {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .price-amount {
+                font-size: 2.5rem;
             }
         }
 
@@ -836,69 +1188,150 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Transparent Pricing</h2>
-                <p class="section-subtitle">Upfront pricing for parking lot painting and striping in Kansas City</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Small Parking Lots</h3>
-                    <div class="price">$300–$600</div>
-                    <p class="price-note">5–20 spaces</p>
-                    <ul class="pricing-list">
-                        <li>Standard striping</li>
-                        <li>Basic layout</li>
-                        <li>Ideal for small businesses</li>
-                        <li>Churches and nonprofits</li>
-                    </ul>
-                </div>
-                <div class="pricing-card">
-                    <h3>Medium Parking Lots</h3>
-                    <div class="price">$600–$1,200</div>
-                    <p class="price-note">20–50 spaces</p>
-                    <ul class="pricing-list">
-                        <li>Complete re-striping</li>
-                        <li>ADA compliance included</li>
-                        <li>Perfect for retail centers</li>
-                        <li>Office buildings</li>
-                    </ul>
-                </div>
-                <div class="pricing-card">
-                    <h3>Large Parking Lots</h3>
-                    <div class="price">$1,200+</div>
-                    <p class="price-note">50+ spaces</p>
-                    <ul class="pricing-list">
-                        <li>Full lot striping</li>
-                        <li>Custom layouts</li>
-                        <li>Multi-section lots</li>
-                        <li>Property management complexes</li>
-                    </ul>
-                </div>
+                <h2 class="section-title">Instant Price Calculator</h2>
+                <p class="section-subtitle">Get a real-time estimate for your Kansas City parking lot striping project</p>
             </div>
 
-            <div style="max-width: 900px; margin: 3rem auto 0;">
-                <h3 style="text-align: center; margin-bottom: 2rem;">Additional Services</h3>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h4>ADA Handicap Stalls</h4>
-                        <div class="price" style="font-size: 1.5rem;">$35–$75 each</div>
-                        <p>Includes logo and compliant markings</p>
-                    </div>
-                    <div class="pricing-card">
-                        <h4>Fire Lanes</h4>
-                        <div class="price" style="font-size: 1.5rem;">$2–$4 per foot</div>
-                        <p>Red or yellow curb painting with stenciling</p>
-                    </div>
-                    <div class="pricing-card">
-                        <h4>Warehouse Floor Lines</h4>
-                        <div class="price" style="font-size: 1.5rem;">$1–$2 per foot</div>
-                        <p>Safety lines, walkways, forklift paths</p>
+            <div class="calculator-wrapper">
+                <!-- Calculator Form -->
+                <div class="calculator-section">
+                    <form id="priceCalculator">
+                        <!-- Project Type -->
+                        <div class="form-section">
+                            <h3>Project Type</h3>
+                            
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="projectType" value="restripe" checked>
+                                    <span class="radio-label">
+                                        <strong>Re-Striping</strong>
+                                        <span class="radio-description">Refresh existing faded lines</span>
+                                    </span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="projectType" value="new">
+                                    <span class="radio-label">
+                                        <strong>New Striping</strong>
+                                        <span class="radio-description">Brand new lot or complete layout change (+75%)</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Basic Info -->
+                        <div class="form-section">
+                            <h3>Basic Information</h3>
+                            
+                            <div class="input-group">
+                                <label for="parkingSpaces">Number of Parking Spaces</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="parkingSpaces" min="0" value="25" required>
+                                    <span class="input-suffix">spaces</span>
+                                </div>
+                                <p class="input-note">Price per space: <span id="perSpaceRate">$20</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Additional Services -->
+                        <div class="form-section">
+                            <h3>Additional Services</h3>
+                            
+                            <div class="input-group">
+                                <label for="adaSpaces">ADA Handicap Spaces</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="adaSpaces" min="0" value="2">
+                                    <span class="input-suffix">spaces @ $55 each</span>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="fireLane">Fire Lane Length</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="fireLane" min="0" value="0">
+                                    <span class="input-suffix">feet @ $3/ft</span>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="stencils">Stencils & Arrows</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="stencils" min="0" value="0">
+                                    <span class="input-suffix">stencils @ $25 each</span>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="paintColors">Number of Paint Colors</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="paintColors" min="1" max="5" value="1">
+                                    <span class="input-suffix">colors</span>
+                                </div>
+                                <p class="input-note">Each additional color: +$50 (equipment cleaning required)</p>
+                            </div>
+                        </div>
+
+                        <!-- Special Requirements -->
+                        <div class="form-section">
+                            <h3>Timing</h3>
+                            
+                            <label class="checkbox-group">
+                                <input type="checkbox" id="afterHours">
+                                <span class="checkbox-label">
+                                    <strong>Night/Weekend Striping</strong>
+                                    <span class="checkbox-description">After-hours work (+25% premium)</span>
+                                </span>
+                            </label>
+                        </div>
+                    </form>
+
+                    <!-- Disclaimer -->
+                    <div class="disclaimer">
+                        <h3>Important Notes:</h3>
+                        <p>This calculator provides an estimate only. Actual pricing may vary based on surface condition, layout complexity, and site-specific requirements.</p>
+                        <p style="margin-top: 0.75rem;"><strong>Minimum charge: $400</strong> for any striping project in Kansas City.</p>
                     </div>
                 </div>
-            </div>
 
-            <div class="pricing-note-box">
-                <h4>Night & Weekend Striping Available</h4>
-                <p>We offer non-peak and late-night parking lot striping for an additional fee. Night work is often required to minimize business disruption, maintain customer safety, and avoid interfering with peak traffic hours. This service is ideal for busy retail centers, restaurants, medical offices, and any business that can't afford daytime downtime. Contact us for a custom quote on after-hours striping in the Kansas City area.</p>
+                <!-- Price Display -->
+                <div class="price-display">
+                    <div class="price-label">Estimated Cost</div>
+                    <div class="price-amount" id="totalPrice">$735</div>
+                    <div class="price-range" id="priceRange">Range: $660 - $810</div>
+
+                    <div class="price-breakdown">
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Base Striping (<span id="displaySpaces">25</span> spaces)</span>
+                            <span class="breakdown-value" id="basePrice">$625</span>
+                        </div>
+                        <div class="breakdown-item" id="newStripingRow" style="display: none;">
+                            <span class="breakdown-label">New Striping Upcharge (75%)</span>
+                            <span class="breakdown-value" id="newStripingPrice">$0</span>
+                        </div>
+                        <div class="breakdown-item" id="adaRow" style="display: flex;">
+                            <span class="breakdown-label">ADA Spaces (<span id="displayAda">2</span>)</span>
+                            <span class="breakdown-value" id="adaPrice">$110</span>
+                        </div>
+                        <div class="breakdown-item" id="fireLaneRow" style="display: none;">
+                            <span class="breakdown-label">Fire Lane (<span id="displayFireLane">0</span> ft)</span>
+                            <span class="breakdown-value" id="fireLanePrice">$0</span>
+                        </div>
+                        <div class="breakdown-item" id="stencilRow" style="display: none;">
+                            <span class="breakdown-label">Stencils (<span id="displayStencils">0</span>)</span>
+                            <span class="breakdown-value" id="stencilPrice">$0</span>
+                        </div>
+                        <div class="breakdown-item" id="colorRow" style="display: none;">
+                            <span class="breakdown-label">Extra Colors (<span id="displayColors">0</span>)</span>
+                            <span class="breakdown-value" id="colorPrice">$0</span>
+                        </div>
+                        <div class="breakdown-item" id="afterHoursRow" style="display: none;">
+                            <span class="breakdown-label">After-Hours Premium (25%)</span>
+                            <span class="breakdown-value" id="afterHoursPrice">$0</span>
+                        </div>
+                    </div>
+
+                    <a href="tel:913-353-4327" class="cta-button">Call for Exact Quote</a>
+                    <a href="#contact" class="cta-secondary">Request Free Quote Online</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1199,6 +1632,7 @@
     </footer>
 
     <script>
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1214,6 +1648,148 @@
                 }
             });
         });
+
+        // Price Calculator
+        const MIN_PRICE = 400;
+        const BASE_RATE_PER_SPACE = 25; // For first 20 spaces
+        const TIER2_RATE = 20; // Spaces 21-50
+        const TIER3_RATE = 15; // Spaces 51+
+        const NEW_STRIPING_MULTIPLIER = 1.75; // 75% upcharge
+        const ADA_SPACE_COST = 55;
+        const FIRE_LANE_RATE = 3;
+        const STENCIL_COST = 25;
+        const COLOR_UPCHARGE = 50;
+        const AFTER_HOURS_MULTIPLIER = 1.25;
+
+        // Get all form elements
+        const projectTypeInputs = document.querySelectorAll('input[name="projectType"]');
+        const parkingSpaces = document.getElementById('parkingSpaces');
+        const adaSpaces = document.getElementById('adaSpaces');
+        const fireLane = document.getElementById('fireLane');
+        const stencils = document.getElementById('stencils');
+        const paintColors = document.getElementById('paintColors');
+        const afterHours = document.getElementById('afterHours');
+
+        // Calculate base price with tiered pricing
+        function calculateBasePrice(spaces) {
+            let price = 0;
+            
+            if (spaces <= 20) {
+                price = spaces * BASE_RATE_PER_SPACE;
+            } else if (spaces <= 50) {
+                price = (20 * BASE_RATE_PER_SPACE) + ((spaces - 20) * TIER2_RATE);
+            } else {
+                price = (20 * BASE_RATE_PER_SPACE) + (30 * TIER2_RATE) + ((spaces - 50) * TIER3_RATE);
+            }
+            
+            return Math.max(price, MIN_PRICE);
+        }
+
+        // Calculate per-space rate
+        function getPerSpaceRate(spaces) {
+            if (spaces === 0) return 0;
+            if (spaces <= 20) return BASE_RATE_PER_SPACE;
+            if (spaces <= 50) return TIER2_RATE;
+            return TIER3_RATE;
+        }
+
+        function updatePrice() {
+            // Get values
+            const projectType = document.querySelector('input[name="projectType"]:checked').value;
+            const spaces = parseInt(parkingSpaces.value) || 0;
+            const ada = parseInt(adaSpaces.value) || 0;
+            const fireLaneFeet = parseInt(fireLane.value) || 0;
+            const stencilCount = parseInt(stencils.value) || 0;
+            const colors = parseInt(paintColors.value) || 1;
+            const isAfterHours = afterHours.checked;
+
+            // Calculate components
+            let basePrice = calculateBasePrice(spaces);
+            const perSpaceRate = getPerSpaceRate(spaces);
+            
+            // Update per-space rate display
+            document.getElementById('perSpaceRate').textContent = '$' + perSpaceRate;
+
+            // New striping upcharge
+            const newStripingCost = (projectType === 'new') ? (basePrice * (NEW_STRIPING_MULTIPLIER - 1)) : 0;
+            basePrice = basePrice + newStripingCost;
+
+            const adaCost = ada * ADA_SPACE_COST;
+            const fireLaneCost = fireLaneFeet * FIRE_LANE_RATE;
+            const stencilCost = stencilCount * STENCIL_COST;
+            const colorCost = (colors > 1) ? (colors - 1) * COLOR_UPCHARGE : 0;
+
+            // Calculate subtotal
+            let subtotal = basePrice + adaCost + fireLaneCost + stencilCost + colorCost;
+
+            // Apply after-hours multiplier
+            const afterHoursCost = isAfterHours ? (subtotal * (AFTER_HOURS_MULTIPLIER - 1)) : 0;
+            const total = subtotal + afterHoursCost;
+
+            // Ensure minimum
+            const finalTotal = Math.max(total, MIN_PRICE);
+
+            // Update display values
+            const baseStripingPrice = calculateBasePrice(spaces);
+            document.getElementById('displaySpaces').textContent = spaces;
+            document.getElementById('basePrice').textContent = '$' + baseStripingPrice.toFixed(0);
+
+            // Update breakdown rows
+            updateBreakdownRow('newStripingRow', null, 'newStripingPrice', projectType === 'new' ? 1 : 0, newStripingCost);
+            updateBreakdownRow('adaRow', 'displayAda', 'adaPrice', ada, adaCost);
+            updateBreakdownRow('fireLaneRow', 'displayFireLane', 'fireLanePrice', fireLaneFeet, fireLaneCost);
+            updateBreakdownRow('stencilRow', 'displayStencils', 'stencilPrice', stencilCount, stencilCost);
+            updateBreakdownRow('colorRow', 'displayColors', 'colorPrice', colors > 1 ? colors - 1 : 0, colorCost);
+            
+            // Update after hours row
+            const afterHoursRow = document.getElementById('afterHoursRow');
+            if (isAfterHours) {
+                afterHoursRow.style.display = 'flex';
+                document.getElementById('afterHoursPrice').textContent = '$' + afterHoursCost.toFixed(0);
+            } else {
+                afterHoursRow.style.display = 'none';
+            }
+
+            // Update total price with animation
+            const priceElement = document.getElementById('totalPrice');
+            priceElement.style.animation = 'none';
+            setTimeout(() => {
+                priceElement.style.animation = '';
+            }, 10);
+            priceElement.textContent = '$' + finalTotal.toFixed(0);
+
+            // Update price range (±10%)
+            const rangeLow = Math.round(finalTotal * 0.9);
+            const rangeHigh = Math.round(finalTotal * 1.1);
+            document.getElementById('priceRange').textContent = `Range: $${rangeLow} - $${rangeHigh}`;
+        }
+
+        function updateBreakdownRow(rowId, displayId, priceId, count, cost) {
+            const row = document.getElementById(rowId);
+            if (count > 0 && cost > 0) {
+                row.style.display = 'flex';
+                if (displayId) {
+                    document.getElementById(displayId).textContent = count;
+                }
+                document.getElementById(priceId).textContent = '$' + cost.toFixed(0);
+            } else {
+                row.style.display = 'none';
+            }
+        }
+
+        // Add event listeners
+        projectTypeInputs.forEach(input => {
+            input.addEventListener('change', updatePrice);
+        });
+        parkingSpaces.addEventListener('input', updatePrice);
+        adaSpaces.addEventListener('input', updatePrice);
+        fireLane.addEventListener('input', updatePrice);
+        stencils.addEventListener('input', updatePrice);
+        paintColors.addEventListener('input', updatePrice);
+        afterHours.addEventListener('change', updatePrice);
+
+        // Initial calculation
+        updatePrice();
     </script>
 </body>
 </html>
