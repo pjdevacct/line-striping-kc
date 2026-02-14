@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line Striping Kansas City | Professional Parking Lot Striping in Prairie Village & KC Metro</title>
-    <meta name="description" content="Professional parking lot line striping in Kansas City, Prairie Village, and Johnson County. ADA compliant striping, fire lanes, curb painting, and warehouse floor markings.">
+    <title>Line Striping Kansas City | Parking Lot Painting & Striping in Johnson County</title>
+    <meta name="description" content="Professional parking lot striping and painting in Kansas City and Johnson County. Fast service, upfront pricing, night striping available. Free quotes. Call 913-353-4327.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@
             --black: #0A0A0A;
             --gray-900: #1A1A1A;
             --gray-800: #2A2A2A;
+            --gray-700: #3A3A3A;
             --gray-600: #5A5A5A;
             --gray-400: #9A9A9A;
             --gray-200: #E5E5E5;
@@ -36,35 +37,19 @@
             overflow-x: hidden;
         }
 
-        /* Typography */
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-family: 'Archivo Black', sans-serif;
             letter-spacing: -0.02em;
-            line-height: 1.1;
+            line-height: 1.2;
         }
 
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-        }
-
-        h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1rem;
-        }
-
-        h3 {
-            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-            margin-bottom: 0.75rem;
-        }
+        h1 { font-size: clamp(2.25rem, 5vw, 4rem); }
+        h2 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 1rem; }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); margin-bottom: 0.75rem; }
+        h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); margin-bottom: 0.5rem; }
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .wide-container {
-            max-width: 1400px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
@@ -106,6 +91,24 @@
             transform: skewX(-10deg);
         }
 
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--gray-900);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--yellow-dark);
+        }
+
         .nav-phone {
             display: flex;
             align-items: center;
@@ -121,7 +124,15 @@
             color: var(--yellow-dark);
         }
 
-        /* Hero Section */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero */
         .hero {
             margin-top: 75px;
             position: relative;
@@ -134,10 +145,7 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background-image: 
                 repeating-linear-gradient(90deg, transparent, transparent 79px, var(--yellow) 79px, var(--yellow) 81px, transparent 81px, transparent 160px),
                 repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255, 214, 0, 0.1) 79px, rgba(255, 214, 0, 0.1) 81px, transparent 81px);
@@ -153,7 +161,8 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 800px;
+            max-width: 850px;
+            animation: fadeInUp 0.8s ease-out;
         }
 
         .hero h1 {
@@ -162,15 +171,20 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .hero-accent {
-            color: var(--yellow);
-        }
+        .hero-accent { color: var(--yellow); }
 
         .hero p {
             font-size: 1.25rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 0.75rem;
             color: var(--gray-200);
             font-weight: 500;
+        }
+
+        .trust-line {
+            font-size: 1rem;
+            color: var(--yellow);
+            margin-bottom: 2.5rem;
+            font-weight: 600;
         }
 
         .cta-buttons {
@@ -216,7 +230,7 @@
             color: var(--black);
         }
 
-        /* Section Styling */
+        /* Sections */
         section {
             padding: 5rem 0;
         }
@@ -247,7 +261,7 @@
             margin-top: 1.5rem;
         }
 
-        /* Services Section */
+        /* Services */
         .services {
             background: var(--gray-100);
         }
@@ -266,6 +280,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
             border-top: 4px solid var(--gray-200);
+            animation: fadeInUp 0.8s ease-out backwards;
         }
 
         .service-card:hover {
@@ -296,7 +311,96 @@
             line-height: 1.7;
         }
 
-        /* Why Choose Us Section */
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+        .service-card:nth-child(6) { animation-delay: 0.6s; }
+        .service-card:nth-child(7) { animation-delay: 0.7s; }
+        .service-card:nth-child(8) { animation-delay: 0.8s; }
+
+        /* Pricing */
+        .pricing {
+            background: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--gray-100);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            border: 2px solid var(--gray-200);
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--yellow);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card h3, .pricing-card h4 {
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--yellow-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-note {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-list {
+            list-style: none;
+        }
+
+        .pricing-list li {
+            padding: 0.5rem 0;
+            color: var(--gray-700);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .pricing-list li::before {
+            content: "✓";
+            color: var(--yellow-dark);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .pricing-note-box {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+
+        .pricing-note-box h4 {
+            color: var(--yellow);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-note-box p {
+            color: var(--gray-200);
+            line-height: 1.8;
+        }
+
+        /* Why Choose */
         .why-choose {
             background: var(--black);
             color: var(--white);
@@ -346,32 +450,33 @@
             line-height: 1.7;
         }
 
-        /* Service Area Section */
+        /* Service Area */
         .service-area {
             background: var(--gray-100);
         }
 
         .area-content {
-            max-width: 600px;
+            max-width: 900px;
             margin: 3rem auto 0;
         }
 
         .area-list {
             list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
         .area-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--gray-200);
-            font-size: 1.1rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 4px;
             font-weight: 500;
             display: flex;
             align-items: center;
             gap: 0.75rem;
-        }
-
-        .area-list li:last-child {
-            border-bottom: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .area-list .check {
@@ -380,11 +485,67 @@
             font-size: 1.3rem;
         }
 
-        .highlight-area {
-            color: var(--black);
-            font-weight: 700;
+        /* Educational */
+        .educational {
+            background: var(--white);
         }
-        /* Contact Section */
+
+        .edu-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .edu-content h3 {
+            color: var(--black);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .edu-content h4 {
+            color: var(--gray-900);
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1.15rem;
+            margin-top: 1.5rem;
+        }
+
+        .edu-content p {
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ */
+        .faq {
+            background: var(--gray-100);
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-item h4 {
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+
+        .faq-item p {
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+
+        /* Contact */
         .contact {
             background: var(--white);
         }
@@ -481,6 +642,25 @@
             min-height: 120px;
         }
 
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-dark) 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            color: var(--gray-900);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
         /* Footer */
         footer {
             background: var(--black);
@@ -505,39 +685,56 @@
             margin: 0.5rem 0;
         }
 
+        footer a {
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--yellow);
+        }
+
         /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero {
                 padding: 4rem 0;
             }
-
             .cta-buttons {
                 flex-direction: column;
             }
-
             .btn {
                 width: 100%;
             }
-
             .contact-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-
             .features-grid {
                 gap: 2rem;
             }
-
             section {
                 padding: 3rem 0;
             }
-
             .nav-phone span {
                 display: none;
             }
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .area-list {
+                grid-template-columns: 1fr;
+            }
         }
 
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -548,153 +745,366 @@
                 transform: translateY(0);
             }
         }
-
-        .hero-content {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .service-card {
-            animation: fadeInUp 0.8s ease-out backwards;
-        }
-
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.2s; }
-        .service-card:nth-child(3) { animation-delay: 0.3s; }
-        .service-card:nth-child(4) { animation-delay: 0.4s; }
-        .service-card:nth-child(5) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-stripe"></div>
                 LINE STRIPING KC
             </a>
+            <div class="nav-links">
+                <a href="services.html">Services</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="service-area.html">Service Area</a>
+                <a href="faq.html">FAQ</a>
+                <a href="blog.html">Blog</a>
+            </div>
             <a href="tel:913-353-4327" class="nav-phone">
                 <span>📞</span> 913-353-4327
             </a>
+            <button class="mobile-menu-btn">☰</button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Professional <span class="hero-accent">Parking Lot Line Striping</span> in Kansas City</h1>
-                <p>Fast, ADA-compliant, high-quality striping services for the Kansas City metro area and Johnson County.</p>
+                <h1>Professional <span class="hero-accent">Parking Lot Striping</span> in Kansas City</h1>
+                <p>Expert line striping and parking lot painting throughout Johnson County and the Kansas City metro area.</p>
+                <p class="trust-line">✓ Local KC Ownership  ✓ Night Striping Available  ✓ Fully Insured</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+                    <a href="#contact" class="btn btn-primary">Get a Free Same-Day Quote</a>
                     <a href="tel:913-353-4327" class="btn btn-secondary">Call 913-353-4327</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Complete parking lot and warehouse striping solutions</p>
+                <h2 class="section-title">Our Line Striping Services</h2>
+                <p class="section-subtitle">Complete parking lot painting and striping solutions for Kansas City businesses</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🅿️</div>
                     <h3>Parking Lot Striping</h3>
-                    <p>Professional parking lot striping and re-striping services. Clean, durable lines that last for years in the Kansas City climate.</p>
+                    <p>Professional parking lot line striping for new and existing lots. Clean, durable lines that last for years in Kansas City weather conditions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>Re-Striping Services</h3>
+                    <p>Refresh faded parking lot lines with our re-striping services. Fast turnaround to keep your property looking professional and safe.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📐</div>
+                    <h3>New Layout Design</h3>
+                    <p>Maximize your parking capacity with expert layout design. We'll help you create an efficient, code-compliant parking configuration.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">♿</div>
-                    <h3>ADA Compliance</h3>
-                    <p>Expertly applied handicap logos and spaces that meet all ADA requirements. Keep your property compliant and accessible.</p>
+                    <h3>ADA Handicap Stalls</h3>
+                    <p>Expertly applied ADA-compliant handicap logos and parking spaces. Keep your Johnson County property compliant and accessible.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔥</div>
-                    <h3>Fire Lane Markings</h3>
-                    <p>Clear, highly visible fire lane striping and signage to ensure safety and meet local fire codes throughout Johnson County.</p>
+                    <h3>Fire Lane Painting</h3>
+                    <p>Clear, highly visible fire lane markings that meet local Kansas City fire codes. Protect emergency access and avoid violations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3>Warehouse Floor Marking</h3>
+                    <p>Industrial floor striping for warehouses and distribution centers. Improve safety, workflow, and OSHA compliance.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🎨</div>
                     <h3>Curb Painting</h3>
-                    <p>Red, yellow, and white curb painting for loading zones, no parking areas, and traffic management. Professional application guaranteed.</p>
+                    <p>Red, yellow, and white curb painting for loading zones, no parking areas, and traffic management throughout the KC metro.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📦</div>
-                    <h3>Warehouse Floor Markings</h3>
-                    <p>Industrial floor striping for warehouses, factories, and distribution centers. Improve safety and workflow efficiency.</p>
+                    <div class="service-icon">🔤</div>
+                    <h3>Stencil Lettering</h3>
+                    <p>Numbers, letters, arrows, "Reserved," "Visitor," and custom stenciling. Professional markings for complete parking lot organization.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Transparent Pricing</h2>
+                <p class="section-subtitle">Upfront pricing for parking lot painting and striping in Kansas City</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Small Parking Lots</h3>
+                    <div class="price">$300–$600</div>
+                    <p class="price-note">5–20 spaces</p>
+                    <ul class="pricing-list">
+                        <li>Standard striping</li>
+                        <li>Basic layout</li>
+                        <li>Ideal for small businesses</li>
+                        <li>Churches and nonprofits</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>Medium Parking Lots</h3>
+                    <div class="price">$600–$1,200</div>
+                    <p class="price-note">20–50 spaces</p>
+                    <ul class="pricing-list">
+                        <li>Complete re-striping</li>
+                        <li>ADA compliance included</li>
+                        <li>Perfect for retail centers</li>
+                        <li>Office buildings</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>Large Parking Lots</h3>
+                    <div class="price">$1,200+</div>
+                    <p class="price-note">50+ spaces</p>
+                    <ul class="pricing-list">
+                        <li>Full lot striping</li>
+                        <li>Custom layouts</li>
+                        <li>Multi-section lots</li>
+                        <li>Property management complexes</li>
+                    </ul>
+                </div>
+            </div>
 
+            <div style="max-width: 900px; margin: 3rem auto 0;">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Additional Services</h3>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h4>ADA Handicap Stalls</h4>
+                        <div class="price" style="font-size: 1.5rem;">$35–$75 each</div>
+                        <p>Includes logo and compliant markings</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>Fire Lanes</h4>
+                        <div class="price" style="font-size: 1.5rem;">$2–$4 per foot</div>
+                        <p>Red or yellow curb painting with stenciling</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>Warehouse Floor Lines</h4>
+                        <div class="price" style="font-size: 1.5rem;">$1–$2 per foot</div>
+                        <p>Safety lines, walkways, forklift paths</p>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Why Choose Us Section -->
+            <div class="pricing-note-box">
+                <h4>Night & Weekend Striping Available</h4>
+                <p>We offer non-peak and late-night parking lot striping for an additional fee. Night work is often required to minimize business disruption, maintain customer safety, and avoid interfering with peak traffic hours. This service is ideal for busy retail centers, restaurants, medical offices, and any business that can't afford daytime downtime. Contact us for a custom quote on after-hours striping in the Kansas City area.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="why-choose" id="why-choose">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Why Choose Line Striping KC</h2>
-                <p class="section-subtitle">The trusted choice for property managers and business owners</p>
+                <p class="section-subtitle">The trusted choice for parking lot painting throughout Kansas City and Johnson County</p>
             </div>
             <div class="features-grid">
                 <div class="feature">
                     <div class="feature-icon">⚡</div>
-                    <h3>Fast Turnaround</h3>
-                    <p>We understand your business can't wait. Most projects completed within 24-48 hours with minimal disruption.</p>
+                    <h3>Fast Scheduling</h3>
+                    <p>Same-day quotes and quick turnaround times. Most Kansas City parking lot striping projects completed within 24-48 hours.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Clear, Upfront Pricing</h3>
+                    <p>No hidden fees or surprises. You'll know the exact cost before we start your parking lot painting project.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Local KC Ownership</h3>
+                    <p>Proudly owned and operated in Kansas City. We know Johnson County businesses and understand local requirements.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌙</div>
+                    <h3>Night & Weekend Available</h3>
+                    <p>Flexible scheduling including after-hours striping to minimize business disruption. We work around your schedule.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>High-Visibility Paint</h3>
+                    <p>We use premium traffic paint designed for maximum visibility and durability in Kansas City's changing weather.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">✓</div>
-                    <h3>ADA Compliant</h3>
-                    <p>All work meets federal and local ADA requirements. Avoid costly fines and ensure accessibility for all customers.</p>
+                    <h3>Clean, Crisp Lines</h3>
+                    <p>Professional equipment and experienced crews ensure perfectly straight, uniform lines every time.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Quality Materials</h3>
-                    <p>We use only premium-grade traffic paint designed to withstand Kansas City weather and heavy traffic.</p>
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Fully Insured</h3>
+                    <p>Complete liability coverage for your protection. Professional service you can trust for your Kansas City property.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">📍</div>
-                    <h3>Local Experts</h3>
-                    <p>Based in Kansas City, we know the area and provide personalized service throughout Johnson County and beyond.</p>
+                    <div class="feature-icon">🤝</div>
+                    <h3>Serving All Businesses</h3>
+                    <p>From churches and nonprofits to small businesses and large property managers—we serve everyone in Johnson County.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service Area Section -->
     <section class="service-area" id="service-area">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Service Area</h2>
-                <p class="section-subtitle">Proudly serving the Kansas City metro area</p>
+                <p class="section-subtitle">Professional parking lot striping throughout Kansas City and Johnson County</p>
             </div>
             <div class="area-content">
-                <div>
-                    <h3 style="text-align: center; margin-bottom: 2rem;">We Serve:</h3>
-                    <ul class="area-list">
-                        <li><span class="check">✓</span> Kansas City Metro (KS & MO)</li>
-                        <li><span class="check">✓</span> Prairie Village, KS</li>
-                        <li><span class="check">✓</span> Overland Park, KS</li>
-                        <li><span class="check">✓</span> Leawood, KS</li>
-                        <li><span class="check">✓</span> Johnson County, KS</li>
-                        <li><span class="check">✓</span> Surrounding Communities</li>
-                    </ul>
-                    <p style="margin-top: 2rem; color: var(--gray-600); line-height: 1.8; text-align: center;">
-                        Serving businesses throughout Johnson County and the greater Kansas City metropolitan area. Contact us to confirm service in your location.
-                    </p>
+                <p style="text-align: center; color: var(--gray-700); line-height: 1.8; margin-bottom: 2rem;">
+                    We provide expert line striping and parking lot painting services across the entire Kansas City metro area, with a focus on Johnson County communities. Whether you need parking lot striping near me in Overland Park, warehouse floor markings in Olathe, or ADA-compliant striping in Leawood, we're ready to serve you.
+                </p>
+                <ul class="area-list">
+                    <li><span class="check">✓</span> Overland Park</li>
+                    <li><span class="check">✓</span> Olathe</li>
+                    <li><span class="check">✓</span> Shawnee</li>
+                    <li><span class="check">✓</span> Lenexa</li>
+                    <li><span class="check">✓</span> Leawood</li>
+                    <li><span class="check">✓</span> Prairie Village</li>
+                    <li><span class="check">✓</span> Mission</li>
+                    <li><span class="check">✓</span> Merriam</li>
+                    <li><span class="check">✓</span> Gardner</li>
+                    <li><span class="check">✓</span> Spring Hill</li>
+                    <li><span class="check">✓</span> Kansas City, MO</li>
+                    <li><span class="check">✓</span> Independence</li>
+                    <li><span class="check">✓</span> Liberty</li>
+                    <li><span class="check">✓</span> Blue Springs</li>
+                    <li><span class="check">✓</span> Raytown</li>
+                </ul>
+                <p style="text-align: center; color: var(--gray-700); line-height: 1.8; margin-top: 2rem;">
+                    Not seeing your city listed? We serve additional communities throughout the Kansas City metro. Contact us to confirm service availability in your area.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="educational">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How Parking Lot Striping Works (And Why It Matters)</h2>
+            </div>
+            <div class="edu-content">
+                <p>
+                    Professional parking lot striping is more than just painting lines—it's a critical investment in your Kansas City property's safety, functionality, and curb appeal. Here's what you need to know about the process and why it matters for your business or property.
+                </p>
+
+                <h3>The Striping Process</h3>
+                <p>
+                    Professional line striping begins with thorough surface preparation. We clean the pavement to remove dirt, debris, and loose material that could interfere with paint adhesion. Next, we measure and mark your layout to ensure proper spacing, ADA compliance, and optimal traffic flow.
+                </p>
+                <p>
+                    We use professional-grade traffic paint specifically formulated for durability and visibility. This paint is applied with precision equipment that creates crisp, uniform lines. Depending on your needs, we can stripe during business hours or schedule after-hours work to minimize disruption.
+                </p>
+
+                <h3>Why Parking Lot Striping Matters</h3>
+                
+                <h4>Safety First</h4>
+                <p>
+                    Clear, visible parking lines guide traffic flow and reduce the risk of accidents. Properly marked handicap spaces, fire lanes, and pedestrian walkways protect both drivers and pedestrians. In Kansas City's often challenging weather conditions, high-visibility markings are essential year-round.
+                </p>
+
+                <h4>Legal Compliance</h4>
+                <p>
+                    ADA compliance isn't optional—it's the law. Proper handicap space sizing, van-accessible spaces, and access aisles must meet federal standards. Fire lane markings must comply with local Kansas City and Johnson County fire codes. Professional striping ensures you meet all legal requirements and avoid costly violations.
+                </p>
+
+                <h4>Curb Appeal & Property Value</h4>
+                <p>
+                    Fresh, crisp parking lot lines make an immediate positive impression on customers, tenants, and visitors. Faded or absent striping suggests neglect and can drive customers away. For property managers and business owners, well-maintained parking lot painting is a cost-effective way to enhance your property's appearance and value.
+                </p>
+
+                <h4>Maximize Parking Capacity</h4>
+                <p>
+                    Expert layout design can significantly increase your parking capacity. We analyze your available space and create efficient configurations that maximize the number of spaces while maintaining proper clearances and accessibility.
+                </p>
+
+                <h3>How Long Does Striping Last?</h3>
+                <p>
+                    In the Kansas City area, parking lot striping typically lasts 1-2 years depending on traffic volume, weather exposure, and paint quality. High-traffic areas may need re-striping more frequently. We use premium traffic paint that stands up to Kansas City's freeze-thaw cycles, summer heat, and heavy use.
+                </p>
+
+                <h3>When Should You Re-Stripe?</h3>
+                <p>
+                    Re-stripe your parking lot when lines become faded, chipped, or difficult to see—especially at night or in wet conditions. Don't wait until lines disappear completely. Proactive maintenance is more cost-effective than waiting for complete deterioration, and it keeps your property looking professional year-round.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about parking lot striping in Kansas City</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How long does line striping take?</h4>
+                    <p>Most parking lots can be striped in 2-4 hours, depending on size and complexity. Small lots (under 20 spaces) often take just 1-2 hours. Larger commercial properties or complex layouts may require 4-8 hours. We'll provide a specific timeline with your quote.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long before cars can drive on fresh paint?</h4>
+                    <p>Paint typically dries to the touch in 15-30 minutes under normal Kansas City weather conditions. We recommend waiting 1 hour before allowing full traffic. For complete curing, wait 24 hours, though this varies with temperature and humidity.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you offer night-time parking lot striping?</h4>
+                    <p>Yes! We frequently perform after-hours and weekend striping for businesses that can't afford daytime disruption. This is especially popular with retail centers, restaurants, and medical offices. Night striping is available for an additional fee.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How often should a parking lot be re-striped?</h4>
+                    <p>In Kansas City, we typically recommend re-striping every 1-2 years. High-traffic areas may need annual re-striping. Factors include traffic volume, weather exposure, and paint quality. If your lines are faded or hard to see at night, it's time to re-stripe.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What type of paint do you use?</h4>
+                    <p>We use premium water-based traffic paint specifically designed for parking lot applications. This paint offers excellent durability, high visibility, and fast drying times. It's formulated to withstand Kansas City's freeze-thaw cycles and summer heat.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you handle ADA compliance?</h4>
+                    <p>Absolutely. We're experts in ADA-compliant striping, including proper handicap space dimensions, van-accessible spaces, access aisles, and International Symbol of Accessibility logos. We ensure your Johnson County property meets all federal accessibility requirements.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can you stripe in cold weather?</h4>
+                    <p>Yes, but with limitations. We can stripe when temperatures are above 50°F and no rain is forecasted for several hours. Paint doesn't adhere or dry properly in freezing conditions. Spring through fall are ideal for parking lot painting in Kansas City.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you offer free quotes?</h4>
+                    <p>Yes! We provide free, no-obligation quotes for all parking lot striping projects in the Kansas City metro area. Most quotes can be provided the same day. Contact us by phone or through our online form.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What areas do you serve?</h4>
+                    <p>We serve the entire Kansas City metro area with a focus on Johnson County. This includes Overland Park, Olathe, Shawnee, Lenexa, Leawood, Prairie Village, Mission, Merriam, Gardner, Spring Hill, Kansas City (MO), Independence, Liberty, Blue Springs, and Raytown.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you do small parking lots?</h4>
+                    <p>Absolutely! We happily serve small businesses, churches, nonprofits, and residential properties. No job is too small. Whether you have 5 spaces or 500, we provide the same professional service and attention to detail.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can you help design a new parking lot layout?</h4>
+                    <p>Yes! We offer layout design services to maximize your parking capacity while ensuring ADA compliance and efficient traffic flow. We'll create a custom configuration that makes the best use of your available space.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Are you insured?</h4>
+                    <p>Yes, we carry full liability insurance for your protection and peace of mind. We're a professional, licensed contractor serving the Kansas City area.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get Your Free Quote</h2>
-                <p class="section-subtitle">Ready to refresh your parking lot? Contact us today!</p>
+                <h2 class="section-title">Get Your Free Quote Today</h2>
+                <p class="section-subtitle">Ready for professional parking lot striping? Contact us for a same-day quote!</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -722,16 +1132,14 @@
                     </div>
                     <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gray-800);">
                         <p style="color: var(--gray-200); line-height: 1.7;">
-                            Call us today for a free, no-obligation quote. We typically respond within 2 hours during business hours.
+                            Call us today for a free, no-obligation quote. We typically respond within 2 hours during business hours. Night and weekend striping available upon request.
                         </p>
                     </div>
                 </div>
                 <div class="contact-form">
                     <form action="https://formsubmit.co/info@linestripingKC.com" method="POST">
-                        <!-- FormSubmit Configuration -->
                         <input type="hidden" name="_subject" value="New Quote Request from Website">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
                         
                         <div class="form-group">
                             <label for="name">Your Name</label>
@@ -746,8 +1154,12 @@
                             <input type="tel" id="phone" name="phone" required>
                         </div>
                         <div class="form-group">
+                            <label for="city">City/Location</label>
+                            <input type="text" id="city" name="city" placeholder="e.g., Overland Park">
+                        </div>
+                        <div class="form-group">
                             <label for="message">Project Details</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your striping needs..."></textarea>
+                            <textarea id="message" name="message" placeholder="Tell us about your parking lot striping needs (approximate size, services needed, timeline, etc.)"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Request Free Quote</button>
                     </form>
@@ -756,20 +1168,37 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready for Professional Parking Lot Striping in Kansas City?</h2>
+            <p>Fast scheduling • Clear pricing • Expert service • Night striping available</p>
+            <div class="cta-buttons" style="justify-content: center;">
+                <a href="tel:913-353-4327" class="btn btn-secondary" style="border-color: var(--black); color: var(--black);">Call 913-353-4327 Now</a>
+                <a href="#contact" class="btn btn-primary" style="background: var(--black); color: var(--yellow);">Get Free Quote</a>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">LINE STRIPING KC</div>
-                <p>Professional Parking Lot Striping in Kansas City</p>
+                <p>Professional Parking Lot Striping & Painting in Kansas City</p>
                 <p>Kansas City Metro | Prairie Village | Overland Park | Leawood | Johnson County</p>
+                <p style="margin-top: 1.5rem;">
+                    <a href="index.html" style="color: var(--gray-400); margin: 0 1rem;">Home</a>
+                    <a href="services.html" style="color: var(--gray-400); margin: 0 1rem;">Services</a>
+                    <a href="pricing.html" style="color: var(--gray-400); margin: 0 1rem;">Pricing</a>
+                    <a href="service-area.html" style="color: var(--gray-400); margin: 0 1rem;">Service Area</a>
+                    <a href="faq.html" style="color: var(--gray-400); margin: 0 1rem;">FAQ</a>
+                    <a href="blog.html" style="color: var(--gray-400); margin: 0 1rem;">Blog</a>
+                </p>
                 <p style="margin-top: 2rem; font-size: 0.9rem;">&copy; 2026 Line Striping Kansas City. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -778,7 +1207,6 @@
                     const headerOffset = 75;
                     const elementPosition = target.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
                     window.scrollTo({
                         top: offsetPosition,
                         behavior: 'smooth'
