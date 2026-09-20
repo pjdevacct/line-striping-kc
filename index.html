@@ -1,99 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<script>if(location.protocol==='http:'&&/(^|\.)linestripingkc\.com$/i.test(location.hostname)){location.replace('https://'+location.host+location.pathname+location.search+location.hash);}</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Service Areas: Kansas City &amp; Johnson County | Line Striping KC</title>
-<meta name="description" content="Parking lot striping across Johnson County, KS and the Kansas City, MO metro: Overland Park, Olathe, Lenexa, Leawood, Independence, and more.">
-<link rel="canonical" href="https://linestripingkc.com/areas/">
-<meta name="theme-color" content="#FFD600">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://linestripingkc.com/areas/">
-<meta property="og:title" content="Service Areas: Kansas City &amp; Johnson County | Line Striping KC">
-<meta property="og:description" content="Parking lot striping across Johnson County, KS and the Kansas City, MO metro: Overland Park, Olathe, Lenexa, Leawood, Independence, and more.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=20260920">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://linestripingkc.com/"}, {"@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://linestripingkc.com/areas/"}]}</script>
+    <meta charset="UTF-8">
+    <script>if(location.protocol==='http:'&&/(^|\.)linestripingkc\.com$/i.test(location.hostname)){location.replace('https://'+location.host+location.pathname+location.search+location.hash);}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Striping Kansas City | Parking Lot Painting & Striping in Johnson County</title>
+    <meta name="description" content="Parking lot striping and painting in Kansas City and Johnson County. Free same-day quotes: text a photo of your lot or call 913-353-4327. Night striping available.">
+    <link rel="canonical" href="https://linestripingkc.com/">
+    <meta name="theme-color" content="#FFD600">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://linestripingkc.com/">
+    <meta property="og:title" content="Line Striping Kansas City | Parking Lot Striping & Painting">
+    <meta property="og:description" content="Free same-day quotes. Text a photo of your lot or call 913-353-4327. Night and weekend striping available.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Line Striping Kansas City",
+        "url": "https://linestripingkc.com/",
+        "telephone": "+1-913-353-4327",
+        "email": "info@linestripingKC.com",
+        "description": "Parking lot striping, re-striping, ADA stalls, fire lanes, curb painting, stencils, and warehouse floor marking in Kansas City and Johnson County.",
+        "areaServed": [
+            {"@type": "City", "name": "Overland Park, KS"},
+            {"@type": "City", "name": "Olathe, KS"},
+            {"@type": "City", "name": "Shawnee, KS"},
+            {"@type": "City", "name": "Lenexa, KS"},
+            {"@type": "City", "name": "Leawood, KS"},
+            {"@type": "City", "name": "Prairie Village, KS"},
+            {"@type": "City", "name": "Mission, KS"},
+            {"@type": "City", "name": "Merriam, KS"},
+            {"@type": "City", "name": "Gardner, KS"},
+            {"@type": "City", "name": "Spring Hill, KS"},
+            {"@type": "City", "name": "Kansas City, MO"},
+            {"@type": "City", "name": "Independence, MO"},
+            {"@type": "City", "name": "Liberty, MO"},
+            {"@type": "City", "name": "Blue Springs, MO"},
+            {"@type": "City", "name": "Raytown, MO"}
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/assets/site.css?v=20260920">
 </head>
 <body id="top">
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<header>
-    <nav>
-        <a href="/" class="logo"><div class="logo-stripe"></div>LINE STRIPING KC</a>
-        <div class="nav-links">
-            <a href="/services/">Services</a>
-            <a href="/#pricing">Pricing</a>
-            <a href="/areas/">Service Area</a>
-            <a href="/#faq">FAQ</a>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <header>
+        <nav>
+            <a href="#top" class="logo">
+                <div class="logo-stripe"></div>
+                LINE STRIPING KC
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#service-area">Service Area</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="nav-actions">
+                <a href="tel:+19133534327" class="nav-phone">📞 913-353-4327</a>
+                <a href="#contact" class="btn btn-primary btn-sm desk-only-nav">Free Quote</a>
+                <button class="mobile-menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a class="menu-link" href="#services">Services</a>
+            <a class="menu-link" href="#pricing">Instant Price Calculator</a>
+            <a class="menu-link" href="#service-area">Service Area</a>
+            <a class="menu-link" href="#faq">FAQ</a>
+            <div class="menu-buttons">
+                <a href="sms:+19133534327?&body=Hi%20Line%20Striping%20KC!%20I%27d%20like%20a%20striping%20quote.%20My%20address%3A%20" class="btn btn-primary">💬 Text a Photo for a Quote</a>
+                <a href="tel:+19133534327" class="btn btn-dark">📞 Call 913-353-4327</a>
+            </div>
         </div>
-        <div class="nav-actions">
-            <a href="tel:+19133534327" class="nav-phone">📞 913-353-4327</a>
-            <a href="#contact" class="btn btn-primary btn-sm desk-only-nav">Free Quote</a>
-            <button class="mobile-menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="eyebrow">Kansas City &amp; Johnson County</span>
+                <h1>Parking Lot Striping in <span class="hero-accent">Kansas City</span>: Get Your Price Today</h1>
+                <p class="hero-sub">Text us a photo of your lot and we'll send a clear, upfront quote the same day. Free, no obligation.</p>
+
+                <div class="cta-row">
+                    <a href="sms:+19133534327?&body=Hi%20Line%20Striping%20KC!%20I%27d%20like%20a%20striping%20quote.%20My%20address%3A%20" class="btn btn-primary touch-only">💬 Text a Photo for a Quote</a>
+                    <a href="#pricing" class="btn btn-primary desk-only">See Your Price Instantly</a>
+                    <a href="tel:+19133534327" class="btn btn-outline-light">📞 Call 913-353-4327</a>
+                </div>
+
+                <ul class="trust-chips">
+                    <li>✓ Local KC Ownership</li>
+                    <li>✓ Night &amp; Weekend Striping</li>
+                    <li>✓ Fully Insured</li>
+                    <li>✓ Free Quotes</li>
+                </ul>
+            </div>
+
+            <div class="hero-form">
+                <h2>Get Your Free Quote</h2>
+                <p class="form-lead">Tell us where and how big. We typically respond within 2 hours during business hours.</p>
+                <form class="mini-form" action="https://formsubmit.co/info@linestripingKC.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Quote Request from Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://linestripingkc.com/?sent=1#contact">
+                    <input type="hidden" name="source" value="Hero form">
+                    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <input type="text" name="name" placeholder="Your name" aria-label="Your name" autocomplete="name" required>
+                    <input type="tel" name="phone" placeholder="Phone number" aria-label="Phone number" autocomplete="tel" inputmode="tel" required>
+                    <input type="text" name="city" placeholder="Business address or city" aria-label="Business address or city" autocomplete="address-level2">
+                    <button type="submit" class="btn btn-primary btn-block">Get My Free Quote</button>
+                </form>
+                <p class="alt-contact">Prefer to talk? Call <a href="tel:+19133534327">913-353-4327</a></p>
+            </div>
         </div>
-    </nav>
-    <div class="mobile-menu" id="mobileMenu">
-        <a class="menu-link" href="/services/">Services</a>
-        <a class="menu-link" href="/#pricing">Instant Price Calculator</a>
-        <a class="menu-link" href="/areas/">Service Area</a>
-        <a class="menu-link" href="/#faq">FAQ</a>
-        <div class="menu-buttons">
-            <a href="sms:+19133534327?&amp;body=Hi%20Line%20Striping%20KC%21%20I%27d%20like%20a%20striping%20quote.%20My%20address%3A%20" class="btn btn-primary">💬 Text a Photo for a Quote</a>
-            <a href="tel:+19133534327" class="btn btn-dark">📞 Call 913-353-4327</a>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="how" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Getting a Quote Takes 2 Minutes</h2>
+                <p class="section-subtitle">No site visit needed for most lots. Here's how it works.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Text or Call Us</h3>
+                    <p>Send a photo of your lot, or just the address and roughly how many spaces you have.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Get Your Price</h3>
+                    <p>We send a clear, upfront quote, usually the same day. No hidden fees, no obligation.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>We Stripe It</h3>
+                    <p>Most projects are completed within 24-48 hours, with night and weekend options to avoid disrupting your business.</p>
+                </div>
+            </div>
+            <div class="section-cta">
+                <div class="cta-row">
+                    <a href="sms:+19133534327?&body=Hi%20Line%20Striping%20KC!%20I%27d%20like%20a%20striping%20quote.%20My%20address%3A%20" class="btn btn-primary touch-only">💬 Text a Photo for a Quote</a>
+                    <a href="#contact" class="btn btn-primary desk-only">Request a Free Quote</a>
+                    <a href="tel:+19133534327" class="btn btn-dark">📞 Call 913-353-4327</a>
+                </div>
+            </div>
         </div>
-    </div>
-</header>
-<div class="breadcrumb" role="navigation" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li aria-current="page">Service Areas</li></ol></div></div>
-<section class="page-hero"><div class="container">
-<h1>Service Areas: Kansas City & Johnson County</h1>
-<p>Parking lot striping and painting across Johnson County, Kansas and the Kansas City, Missouri metro.</p>
-<div class="cta-row">
-<a href="sms:+19133534327?&amp;body=Hi%20Line%20Striping%20KC%21%20I%27d%20like%20a%20striping%20quote.%20My%20address%3A%20" class="btn btn-primary touch-only">💬 Text a Photo for a Quote</a>
-<a href="#contact" class="btn btn-primary desk-only">Get a Free Quote</a>
-<a href="tel:+19133534327" class="btn btn-outline-light">📞 Call 913-353-4327</a>
-</div></div></section>
-<section class="service-area"><div class="container">
-<p class="hub-intro">Line Striping KC serves the whole Kansas City metro, with a focus on Johnson County. Choose your city to see the services we offer there, or text us a photo of your lot for a free same-day quote.</p>
-<div class="section-header"><h2 class="section-title">Johnson County, Kansas</h2></div>
-<ul class="area-list "><li><a href="/areas/overland-park/">Overland Park</a></li><li><a href="/areas/olathe/">Olathe</a></li><li><a href="/areas/shawnee/">Shawnee</a></li><li><a href="/areas/lenexa/">Lenexa</a></li><li><a href="/areas/leawood/">Leawood</a></li><li><a href="/areas/prairie-village/">Prairie Village</a></li><li><a href="/areas/mission/">Mission</a></li><li><a href="/areas/merriam/">Merriam</a></li><li><a href="/areas/gardner/">Gardner</a></li><li><a href="/areas/spring-hill/">Spring Hill</a></li></ul>
-<div class="section-header" style="margin-top:3rem"><h2 class="section-title">Kansas City Metro, Missouri</h2></div>
-<ul class="area-list "><li><a href="/areas/kansas-city-mo/">Kansas City, MO</a></li><li><a href="/areas/independence/">Independence</a></li><li><a href="/areas/liberty/">Liberty</a></li><li><a href="/areas/blue-springs/">Blue Springs</a></li><li><a href="/areas/raytown/">Raytown</a></li></ul>
-<p class="area-note">Don't see your city? We serve additional communities across the metro. <a href="tel:+19133534327">Call</a> or <a href="#contact">send us a message</a> to confirm. Looking for a specific service? <a href="/services/">See all services &rarr;</a></p>
-</div></section>
-<section class="contact bg-white" id="contact"><div class="container">
-<div class="section-header"><h2 class="section-title">Get Your Free Quote Today</h2><p class="section-subtitle">Fastest way: text us a photo. Prefer a form or a call? That works too.</p></div>
-<div class="contact-content">
-<div class="contact-info">
-<h3>Talk to a Real Person</h3>
-<p>We typically respond within 2 hours during business hours. Night and weekend striping available upon request.</p>
-<div class="contact-buttons">
-<a href="sms:+19133534327?&amp;body=Hi%20Line%20Striping%20KC%21%20I%27d%20like%20a%20striping%20quote.%20My%20address%3A%20" class="btn btn-primary btn-block touch-only">💬 Text a Photo of Your Lot</a>
-<a href="tel:+19133534327" class="btn btn-primary btn-block">📞 Call 913-353-4327</a>
-</div>
-<div class="contact-detail">
-<p class="desk-only">Text or call: <a href="tel:+19133534327">913-353-4327</a></p>
-<p>Email: <a href="mailto:info@linestripingKC.com">info@linestripingKC.com</a></p>
-<p>Serving Kansas City Metro &amp; Johnson County, KS</p>
-</div></div>
-<div class="contact-form">
-<h3>Or Send Us a Message</h3>
-<form action="https://formsubmit.co/info@linestripingKC.com" method="POST">
-<input type="hidden" name="_subject" value="New Quote Request from Website">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://linestripingkc.com/areas/?sent=1#contact">
-<input type="hidden" name="source" value="Areas hub">
-<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-<div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" autocomplete="name" required></div>
-<div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required></div>
-<div class="form-group"><label for="email">Email (optional)</label><input type="email" id="email" name="email" autocomplete="email"></div>
-<div class="form-group"><label for="city">Address or City</label><input type="text" id="city" name="city" placeholder="e.g., Overland Park"></div>
-<div class="form-group"><label for="message">Project Details (optional)</label><textarea id="message" name="message" placeholder="Approximate number of spaces, services needed, timeline, etc."></textarea><p class="form-hint">Have a photo? Text it to 913-353-4327 for the fastest quote.</p></div>
-<button type="submit" class="btn btn-primary btn-block">Request Free Quote</button>
-</form></div></div></div></section>
-<footer><div class="container"><div class="footer-content">
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Line Striping Services</h2>
+                <p class="section-subtitle">Complete parking lot painting and striping for Kansas City businesses</p>
+            </div>
+            <div class="services-grid">
+                <a class="service-card" href="/services/parking-lot-striping/"><div class="service-icon">🅿️</div><h3>Parking Lot Striping</h3><p>Clean, durable lines for new and existing lots, built for Kansas City weather.</p><span class="card-link">Learn more &rarr;</span></a>
+                <a class="service-card" href="/services/re-striping/"><div class="service-icon">🔄</div><h3>Re-Striping</h3><p>Refresh faded lines fast to keep your property looking professional and safe.</p><span class="card-link">Learn more &rarr;</span></a>
+                <a class="service-card" href="/services/parking-lot-layout-design/"><div class="service-icon">📐</div><h3>Parking Lot Layout Design</h3><p>Fit more spaces into the same lot with an efficient, code-compliant layout.</p><span class="card-link">Learn more &rarr;</span></a>
+                <a class="service-card" href="/services/ada-parking-stalls/"><div class="service-icon">♿</div><h3>ADA Parking Stalls</h3><p>ADA-compliant stalls, access aisles, and logos to keep your property accessible.</p><span class="card-link">Learn more &rarr;</span></a>
+                <a class="service-card" href="/services/fire-lane-painting/"><div class="service-icon">🔥</div><h3>Fire Lane Painting</h3><p>Highly visible fire lane markings that meet local Kansas City fire codes.</p><span class="card-link">Learn more &rarr;</span></a>
+                <a class="service-card" href="/services/warehouse-floor-marking/"><div class="service-icon">📦</div><h3>Warehouse Floor Marking</h3><p>Industrial floor striping that improves safety, workflow, and OSHA compliance.</p><span class="card-link">Learn more &rarr;</span></a>
+                <a class="service-card" href="/services/curb-painting/"><div class="service-icon">🎨</div><h3>Curb Painting</h3><p>Red, yellow, and white curbs for loading zones and no-parking areas.</p><span class="card-link">Learn more &rarr;</span></a>
+                <a class="service-card" href="/services/stencil-lettering/"><div class="service-icon">🔤</div><h3>Stencil Lettering</h3><p>Numbers, arrows, "Reserved," "Visitor," and custom stenciling.</p><span class="card-link">Learn more &rarr;</span></a>
+            </div>
+            <div class="section-cta"><a class="btn btn-dark" href="/services/">See All Services &rarr;</a></div>
+        </div>
+    </section>
+
+    <!-- ================= PRICE CALCULATOR ================= -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See Your Price in 30 Seconds</h2>
+                <p class="section-subtitle">Our instant calculator shows exactly how we price. Then text us the estimate to lock it in.</p>
+            </div>
+
+            <div class="calculator-wrapper">
+                <div class="calculator-section">
+                    <form id="priceCalculator" onsubmit="return false;">
+                        <div class="form-section">
+                            <h3>Project Type</h3>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="projectType" value="restripe" checked>
+                                    <span class="radio-label">
+                                        <strong>Re-Striping</strong>
+                                        <span class="radio-description">Refresh existing faded lines</span>
+                                    </span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="projectType" value="new">
+                                    <span class="radio-label">
+                                        <strong>New Striping</strong>
+                                        <span class="radio-description">Brand new lot or complete layout change (+75%)</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Basic Information</h3>
+                            <div class="input-group">
+                                <label for="parkingSpaces">Number of Parking Spaces</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="parkingSpaces" min="0" inputmode="numeric" value="25">
+                                    <span class="input-suffix">spaces</span>
+                                </div>
+                                <p class="input-note">$25/space for the first 20, $20/space for spaces 21-50, $15/space after 50</p>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Additional Services</h3>
+                            <div class="input-group">
+                                <label for="adaSpaces">ADA Handicap Spaces</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="adaSpaces" min="0" inputmode="numeric" value="2">
+                                    <span class="input-suffix">spaces @ $55 each</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="fireLane">Fire Lane Length</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="fireLane" min="0" inputmode="numeric" value="0">
+                                    <span class="input-suffix">feet @ $3/ft</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="stencils">Stencils &amp; Arrows</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="stencils" min="0" inputmode="numeric" value="0">
+                                    <span class="input-suffix">stencils @ $25 each</span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="paintColors">Number of Paint Colors</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="paintColors" min="1" max="5" inputmode="numeric" value="1">
+                                    <span class="input-suffix">colors</span>
+                                </div>
+                                <p class="input-note">Each additional color: +$50 (equipment cleaning required)</p>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Timing</h3>
+                            <label class="checkbox-group">
+                                <input type="checkbox" id="afterHours">
+                                <span class="checkbox-label">
+                                    <strong>Night/Weekend Striping</strong>
+                                    <span class="checkbox-description">After-hours work (+25% premium)</span>
+                                </span>
+                            </label>
+                        </div>
+                    </form>
+
+                    <div class="disclaimer">
+                        <p>This calculator provides an estimate only. Actual pricing may vary based on surface condition, layout complexity, and site-specific requirements.</p>
+                        <p><strong>Minimum charge: $400</strong> for any striping project in Kansas City.</p>
+                    </div>
+                </div>
+
+                <div class="price-display">
+                    <div class="price-label">Estimated Cost</div>
+                    <div class="price-amount" id="totalPrice">$710</div>
+                    <div class="price-range" id="priceRange">Range: $639 - $781</div>
+
+                    <div class="price-breakdown">
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Base Striping (<span id="displaySpaces">25</span> spaces)</span>
+                            <span class="breakdown-value" id="basePrice">$600</span>
+                        </div>
+                        <div class="breakdown-item" id="newStripingRow" style="display: none;">
+                            <span class="breakdown-label">New Striping Upcharge (75%)</span>
+                            <span class="breakdown-value" id="newStripingPrice">$0</span>
+                        </div>
+                        <div class="breakdown-item" id="adaRow" style="display: flex;">
+                            <span class="breakdown-label">ADA Spaces (<span id="displayAda">2</span>)</span>
+                            <span class="breakdown-value" id="adaPrice">$110</span>
+                        </div>
+                        <div class="breakdown-item" id="fireLaneRow" style="display: none;">
+                            <span class="breakdown-label">Fire Lane (<span id="displayFireLane">0</span> ft)</span>
+                            <span class="breakdown-value" id="fireLanePrice">$0</span>
+                        </div>
+                        <div class="breakdown-item" id="stencilRow" style="display: none;">
+                            <span class="breakdown-label">Stencils (<span id="displayStencils">0</span>)</span>
+                            <span class="breakdown-value" id="stencilPrice">$0</span>
+                        </div>
+                        <div class="breakdown-item" id="colorRow" style="display: none;">
+                            <span class="breakdown-label">Extra Colors (<span id="displayColors">0</span>)</span>
+                            <span class="breakdown-value" id="colorPrice">$0</span>
+                        </div>
+                        <div class="breakdown-item" id="afterHoursRow" style="display: none;">
+                            <span class="breakdown-label">After-Hours Premium (25%)</span>
+                            <span class="breakdown-value" id="afterHoursPrice">$0</span>
+                        </div>
+                    </div>
+
+                    <a href="sms:+19133534327" id="smsQuote" class="cta-button touch-only">💬 Text Us This Estimate</a>
+                    <a href="#contact" class="cta-button desk-only js-prefill">Request This Quote</a>
+                    <a href="tel:+19133534327" class="cta-secondary">📞 Call 913-353-4327</a>
+                    <a href="#contact" class="cta-secondary touch-only js-prefill">Or request it online</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= WHY US ================= -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Line Striping KC</h2>
+                <p class="section-subtitle">The trusted choice for parking lot painting across Kansas City and Johnson County</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Same-Day Quotes</h3>
+                    <p>Text a photo or call and get a clear price fast. Most projects are completed within 24-48 hours.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Upfront Pricing</h3>
+                    <p>No hidden fees or surprises. You'll know the exact cost before we start, and our calculator shows how we price.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌙</div>
+                    <h3>Night &amp; Weekend Striping</h3>
+                    <p>We work around your schedule so customers and tenants aren't disrupted.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Local KC Ownership</h3>
+                    <p>Owned and operated in Kansas City. We know Johnson County businesses and local requirements.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Fully Insured</h3>
+                    <p>Complete liability coverage for your protection and peace of mind.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Every Size Lot</h3>
+                    <p>Churches, nonprofits, small businesses, and property managers. Whether it's 5 spaces or 500.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SERVICE AREA ================= -->
+    <section class="service-area" id="service-area">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Service Area</h2>
+                <p class="section-subtitle">Parking lot striping across Kansas City and Johnson County</p>
+            </div>
+            <p class="area-intro">Looking for parking lot striping near you? From <a href="/areas/overland-park/">Overland Park</a> and <a href="/areas/olathe/">Olathe</a> to <a href="/areas/leawood/">Leawood</a> and <a href="/areas/independence/">Independence</a>, we serve the whole Kansas City metro.</p>
+            <ul class="area-list">
+                <li><a href="/areas/overland-park/">Overland Park</a></li>
+                <li><a href="/areas/olathe/">Olathe</a></li>
+                <li><a href="/areas/shawnee/">Shawnee</a></li>
+                <li><a href="/areas/lenexa/">Lenexa</a></li>
+                <li><a href="/areas/leawood/">Leawood</a></li>
+                <li><a href="/areas/prairie-village/">Prairie Village</a></li>
+                <li><a href="/areas/mission/">Mission</a></li>
+                <li><a href="/areas/merriam/">Merriam</a></li>
+                <li><a href="/areas/gardner/">Gardner</a></li>
+                <li><a href="/areas/spring-hill/">Spring Hill</a></li>
+                <li><a href="/areas/kansas-city-mo/">Kansas City, MO</a></li>
+                <li><a href="/areas/independence/">Independence</a></li>
+                <li><a href="/areas/liberty/">Liberty</a></li>
+                <li><a href="/areas/blue-springs/">Blue Springs</a></li>
+                <li><a href="/areas/raytown/">Raytown</a></li>
+            </ul>
+            <p class="area-note">Don't see your city? We serve additional communities across the metro. <a href="tel:+19133534327">Call</a> or <a href="#contact">send us a message</a> to confirm.</p>
+            <p class="area-note"><a href="/areas/">View all service areas &rarr;</a></p>
+        </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers about parking lot striping in Kansas City</p>
+            </div>
+            <div class="faq-list">
+                <details>
+                    <summary>What do I need to send to get a quote?</summary>
+                    <p>A photo of your lot (or just the address), roughly how many spaces you have, and anything special like ADA stalls, fire lanes, stencils, or curbs. That's usually enough for us to send a price the same day.</p>
+                </details>
+                <details>
+                    <summary>How long does line striping take?</summary>
+                    <p>Most parking lots can be striped in 2-4 hours, depending on size and complexity. Small lots (under 20 spaces) often take just 1-2 hours. Larger commercial properties or complex layouts may require 4-8 hours. We'll give you a specific timeline with your quote.</p>
+                </details>
+                <details>
+                    <summary>How long before cars can drive on fresh paint?</summary>
+                    <p>Paint typically dries to the touch in 15-30 minutes under normal Kansas City weather. We recommend waiting about 1 hour before allowing full traffic. Complete curing takes about 24 hours, though this varies with temperature and humidity.</p>
+                </details>
+                <details>
+                    <summary>Do you offer night and weekend striping?</summary>
+                    <p>Yes! We frequently stripe after hours and on weekends for businesses that can't afford daytime disruption, especially retail centers, restaurants, and medical offices. Night and weekend work carries a 25% premium.</p>
+                </details>
+                <details>
+                    <summary>How often should a parking lot be re-striped?</summary>
+                    <p>In Kansas City, striping typically lasts 1-2 years depending on traffic, weather, and paint quality. High-traffic areas may need it annually. If your lines are faded or hard to see at night or in the rain, it's time. Re-striping early is more cost-effective than waiting for lines to disappear completely.</p>
+                </details>
+                <details>
+                    <summary>What type of paint do you use?</summary>
+                    <p>Premium water-based traffic paint made for parking lots. It offers excellent durability, high visibility, and fast drying, and it's formulated to withstand Kansas City's freeze-thaw cycles and summer heat.</p>
+                </details>
+                <details>
+                    <summary>Do you handle ADA compliance and fire lanes?</summary>
+                    <p>Absolutely. We handle proper handicap space dimensions, van-accessible spaces, access aisles, and International Symbol of Accessibility logos, plus fire lane markings that meet local Kansas City and Johnson County fire codes. Getting these right helps you avoid costly violations.</p>
+                </details>
+                <details>
+                    <summary>Can you stripe in cold weather?</summary>
+                    <p>Yes, with limits. We can stripe when temperatures are above 50°F and no rain is forecast for several hours. Paint doesn't adhere or dry properly in freezing conditions, so spring through fall is ideal.</p>
+                </details>
+                <details>
+                    <summary>Can you help design a new lot layout?</summary>
+                    <p>Yes! We can design a layout that maximizes your parking capacity while ensuring ADA compliance and efficient traffic flow.</p>
+                </details>
+                <details>
+                    <summary>Are you insured?</summary>
+                    <p>Yes, we carry full liability insurance for your protection and peace of mind. We're a professional, licensed contractor serving the Kansas City area.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get Your Free Quote Today</h2>
+                <p class="section-subtitle">Fastest way: text us a photo. Prefer a form or a call? That works too.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Talk to a Real Person</h3>
+                    <p>We typically respond within 2 hours during business hours. Night and weekend striping available upon request.</p>
+                    <div class="contact-buttons">
+                        <a href="sms:+19133534327?&body=Hi%20Line%20Striping%20KC!%20I%27d%20like%20a%20striping%20quote.%20My%20address%3A%20" class="btn btn-primary btn-block touch-only">💬 Text a Photo of Your Lot</a>
+                        <a href="tel:+19133534327" class="btn btn-primary btn-block">📞 Call 913-353-4327</a>
+                    </div>
+                    <div class="contact-detail">
+                        <p class="desk-only">Text or call: <a href="tel:+19133534327">913-353-4327</a></p>
+                        <p>Email: <a href="mailto:info@linestripingKC.com">info@linestripingKC.com</a></p>
+                        <p>Serving Kansas City Metro &amp; Johnson County, KS</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Or Send Us a Message</h3>
+                    <form action="https://formsubmit.co/info@linestripingKC.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Quote Request from Website">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://linestripingkc.com/?sent=1#contact">
+                        <input type="hidden" name="source" value="Contact form">
+                        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email (optional)</label>
+                            <input type="email" id="email" name="email" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Address or City</label>
+                            <input type="text" id="city" name="city" placeholder="e.g., Overland Park">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details (optional)</label>
+                            <textarea id="message" name="message" placeholder="Approximate number of spaces, services needed, timeline, etc."></textarea>
+                            <p class="form-hint">Have a photo? Text it to 913-353-4327 for the fastest quote.</p>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Request Free Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer><div class="container"><div class="footer-content">
 <div class="footer-grid">
 <div class="footer-col footer-brand">
 <div class="footer-logo">LINE STRIPING KC</div>
@@ -114,11 +521,151 @@
 </div>
 <p class="footer-copy">&copy; 2026 Line Striping Kansas City. All rights reserved.</p>
 </div></div></footer>
-<div class="sticky-cta" aria-label="Contact options">
-<a href="tel:+19133534327">📞 Call</a>
-<a href="sms:+19133534327?&amp;body=Hi%20Line%20Striping%20KC%21%20I%27d%20like%20a%20striping%20quote.%20My%20address%3A%20" class="s-text">💬 Text</a>
-<a href="#contact">Free Quote</a>
-</div>
-<script src="/assets/site.js?v=20260920"></script>
+
+    <!-- Sticky call / text / quote bar (phones only) -->
+    <div class="sticky-cta" aria-label="Contact options">
+        <a href="tel:+19133534327">📞 Call</a>
+        <a href="sms:+19133534327?&body=Hi%20Line%20Striping%20KC!%20I%27d%20like%20a%20striping%20quote.%20My%20address%3A%20" class="s-text">💬 Text</a>
+        <a href="#contact">Free Quote</a>
+    </div>
+
+    <script src="/assets/site.js?v=20260920"></script>
+    <script>
+        // ---------- Price calculator ----------
+        const SMS_NUMBER = '+19133534327';
+        const MIN_PRICE = 400;
+        const BASE_RATE_PER_SPACE = 25; // First 20 spaces
+        const TIER2_RATE = 20;          // Spaces 21-50
+        const TIER3_RATE = 15;          // Spaces 51+
+        const NEW_STRIPING_MULTIPLIER = 1.75; // 75% upcharge
+        const ADA_SPACE_COST = 55;
+        const FIRE_LANE_RATE = 3;
+        const STENCIL_COST = 25;
+        const COLOR_UPCHARGE = 50;
+        const AFTER_HOURS_MULTIPLIER = 1.25;
+
+        const projectTypeInputs = document.querySelectorAll('input[name="projectType"]');
+        const parkingSpaces = document.getElementById('parkingSpaces');
+        const adaSpaces = document.getElementById('adaSpaces');
+        const fireLane = document.getElementById('fireLane');
+        const stencils = document.getElementById('stencils');
+        const paintColors = document.getElementById('paintColors');
+        const afterHours = document.getElementById('afterHours');
+        const smsQuote = document.getElementById('smsQuote');
+        const messageBox = document.getElementById('message');
+
+        let currentSummary = '';
+        let lastAutoFill = '';
+
+        function calculateBasePrice(spaces) {
+            let price = 0;
+            if (spaces <= 20) {
+                price = spaces * BASE_RATE_PER_SPACE;
+            } else if (spaces <= 50) {
+                price = (20 * BASE_RATE_PER_SPACE) + ((spaces - 20) * TIER2_RATE);
+            } else {
+                price = (20 * BASE_RATE_PER_SPACE) + (30 * TIER2_RATE) + ((spaces - 50) * TIER3_RATE);
+            }
+            return Math.max(price, MIN_PRICE);
+        }
+
+        function readNumber(input, min, max) {
+            let value = parseInt(input.value, 10);
+            if (isNaN(value)) value = min;
+            value = Math.max(min, value);
+            if (typeof max === 'number') value = Math.min(max, value);
+            return value;
+        }
+
+        function updateBreakdownRow(rowId, displayId, priceId, count, cost) {
+            const row = document.getElementById(rowId);
+            if (count > 0 && cost > 0) {
+                row.style.display = 'flex';
+                if (displayId) {
+                    document.getElementById(displayId).textContent = count;
+                }
+                document.getElementById(priceId).textContent = '$' + cost.toFixed(0);
+            } else {
+                row.style.display = 'none';
+            }
+        }
+
+        function updatePrice() {
+            const projectType = document.querySelector('input[name="projectType"]:checked').value;
+            const spaces = readNumber(parkingSpaces, 0);
+            const ada = readNumber(adaSpaces, 0);
+            const fireLaneFeet = readNumber(fireLane, 0);
+            const stencilCount = readNumber(stencils, 0);
+            const colors = readNumber(paintColors, 1, 5);
+            const isAfterHours = afterHours.checked;
+
+            const baseStripingPrice = calculateBasePrice(spaces);
+            const newStripingCost = (projectType === 'new') ? (baseStripingPrice * (NEW_STRIPING_MULTIPLIER - 1)) : 0;
+            const adaCost = ada * ADA_SPACE_COST;
+            const fireLaneCost = fireLaneFeet * FIRE_LANE_RATE;
+            const stencilCost = stencilCount * STENCIL_COST;
+            const colorCost = (colors > 1) ? (colors - 1) * COLOR_UPCHARGE : 0;
+
+            const subtotal = baseStripingPrice + newStripingCost + adaCost + fireLaneCost + stencilCost + colorCost;
+            const afterHoursCost = isAfterHours ? (subtotal * (AFTER_HOURS_MULTIPLIER - 1)) : 0;
+            const finalTotal = Math.max(subtotal + afterHoursCost, MIN_PRICE);
+
+            document.getElementById('displaySpaces').textContent = spaces;
+            document.getElementById('basePrice').textContent = '$' + baseStripingPrice.toFixed(0);
+
+            updateBreakdownRow('newStripingRow', null, 'newStripingPrice', projectType === 'new' ? 1 : 0, newStripingCost);
+            updateBreakdownRow('adaRow', 'displayAda', 'adaPrice', ada, adaCost);
+            updateBreakdownRow('fireLaneRow', 'displayFireLane', 'fireLanePrice', fireLaneFeet, fireLaneCost);
+            updateBreakdownRow('stencilRow', 'displayStencils', 'stencilPrice', stencilCount, stencilCost);
+            updateBreakdownRow('colorRow', 'displayColors', 'colorPrice', colors > 1 ? colors - 1 : 0, colorCost);
+
+            const afterHoursRow = document.getElementById('afterHoursRow');
+            if (isAfterHours) {
+                afterHoursRow.style.display = 'flex';
+                document.getElementById('afterHoursPrice').textContent = '$' + afterHoursCost.toFixed(0);
+            } else {
+                afterHoursRow.style.display = 'none';
+            }
+
+            document.getElementById('totalPrice').textContent = '$' + finalTotal.toFixed(0);
+            const rangeLow = Math.round(finalTotal * 0.9);
+            const rangeHigh = Math.round(finalTotal * 1.1);
+            document.getElementById('priceRange').textContent = 'Range: $' + rangeLow + ' - $' + rangeHigh;
+
+            // Build a plain-English summary used by the "Text Us This Estimate" button and the form prefill
+            const parts = [
+                (projectType === 'new' ? 'New striping' : 'Re-striping'),
+                spaces + ' spaces'
+            ];
+            if (ada > 0) parts.push(ada + ' ADA stall' + (ada > 1 ? 's' : ''));
+            if (fireLaneFeet > 0) parts.push(fireLaneFeet + ' ft fire lane');
+            if (stencilCount > 0) parts.push(stencilCount + ' stencil' + (stencilCount > 1 ? 's' : ''));
+            if (colors > 1) parts.push(colors + ' paint colors');
+            if (isAfterHours) parts.push('night/weekend');
+
+            currentSummary = 'Calculator estimate: $' + finalTotal.toFixed(0) + ' (' + parts.join(', ') + ').';
+
+            const body = "Hi Line Striping KC! I'd like a quote. " + currentSummary + ' My address: ';
+            smsQuote.href = 'sms:' + SMS_NUMBER + '?&body=' + encodeURIComponent(body);
+        }
+
+        // Copy the calculator estimate into the contact form when someone clicks "Request This Quote"
+        document.querySelectorAll('.js-prefill').forEach(function (link) {
+            link.addEventListener('click', function () {
+                if (messageBox.value.trim() === '' || messageBox.value === lastAutoFill) {
+                    messageBox.value = currentSummary;
+                    lastAutoFill = currentSummary;
+                }
+            });
+        });
+
+        projectTypeInputs.forEach(function (input) { input.addEventListener('change', updatePrice); });
+        [parkingSpaces, adaSpaces, fireLane, stencils, paintColors].forEach(function (el) {
+            el.addEventListener('input', updatePrice);
+        });
+        afterHours.addEventListener('change', updatePrice);
+
+        updatePrice();
+    </script>
 </body>
 </html>
